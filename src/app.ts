@@ -6,7 +6,10 @@ import provider from './admin/auth-provider.js';
 import options from './admin/options.js';
 import initializeDb from './db/index.js';
 
-const port = process.env.PORT || 3000;
+// CONSTANTS
+import { COOKIE_SECRET, PORT } from './config.global.js';
+
+const port = PORT;
 
 const start = async () => {
   const app = express();
@@ -24,16 +27,16 @@ const start = async () => {
   const router = buildAuthenticatedRouter(
     admin,
     {
-      cookiePassword: process.env.COOKIE_SECRET,
+      cookiePassword: COOKIE_SECRET,
       cookieName: 'adminjs',
       provider,
     },
     null,
     {
-      secret: process.env.COOKIE_SECRET,
+      secret: COOKIE_SECRET,
       saveUninitialized: true,
       resave: true,
-    },
+    }
   );
 
   app.use(admin.options.rootPath, router);
