@@ -16,5 +16,6 @@ export const DATABASE_NAME = process.env.DATABASE_NAME as string;
 export const DATABASE_HOST = process.env.DATABASE_HOST || 'localhost';
 export const DATABASE_USER = process.env.DATABASE_USER as string;
 export const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD as string;
+export const DATABASE_PORT = process.env.DATABASE_PORT;
 export const COOKIE_SECRET = process.env.COOKIE_SECRET as string;
 export const PORT = process.env.PORT || 3000;
