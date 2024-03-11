@@ -28,6 +28,7 @@ const config: DataSourceOptions = {
   migrationsTransactionMode: 'all',
   synchronize: true,
   subscribers: [],
+  // set migrationsRun to true and synchronize to false if you want you DB tables to be altered only through migrations
 };
 
 export default config;

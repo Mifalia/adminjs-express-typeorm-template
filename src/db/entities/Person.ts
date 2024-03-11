@@ -13,5 +13,8 @@ export class Person extends BaseEntity {
   public lastName: string;
 
   @Column({ type: 'integer' })
-  public age: string;
+  public children: number;
+
+  @Column({ type: 'boolean' })
+  public married: boolean;
 }

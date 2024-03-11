@@ -12,6 +12,7 @@
     "migration:rollback": "typeorm-ts-node-esm -d .ormconfigcli.js migration:revert"
   },
   "dependencies": {
+    "@adminjs/design-system": "^4.1.1",
     "@adminjs/express": "^6.1.0",
     "@adminjs/typeorm": "^5.0.1",
     "adminjs": "^7.4.1",
